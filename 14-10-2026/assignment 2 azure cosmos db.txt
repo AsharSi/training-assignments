@@ -1,0 +1,92 @@
+SELECT b.guest_name, b.city, b.hotel_name FROM bookings b
+SELECT b.guest_name, b.room_type, b.nights, b.booking_amount FROM bookings b
+SELECT b.id, b.guest_name, b.booking_status FROM bookings b
+
+ {
+        "id": "HB001",
+        "guest_name": "Arjun Sethi",
+        "city": "Hyderabad",
+        "hotel_name": "Grand Meridian",
+        "room_type": "Deluxe",
+        "nights": 3,
+        "room_rate": 5200,
+        "booking_amount": 15600,
+        "booking_status": "Confirmed",
+        "rating": 4.5,
+        "_rid": "xfhBAKedcZ8BAAAAAAAAAA==",
+        "_self": "dbs/xfhBAA==/colls/xfhBAKedcZ8=/docs/xfhBAKedcZ8BAAAAAAAAAA==/",
+        "_etag": "\"00005a02-0000-2200-0000-6acf5f2e0000\"",
+        "_attachments": "attachments/",
+        "_ts": 1791975214
+    }
+
+SELECT * FROM bookings b WHERE b.city = "Hyderabad"
+SELECT * FROM bookings b WHERE b.city = "Mumbai"
+SELECT * FROM bookings b WHERE b.booking_status = "Completed"
+SELECT * FROM bookings b WHERE b.room_type = "Suite"
+SELECT * FROM bookings b WHERE b.room_type = "Executive"
+
+
+SELECT * FROM bookings b WHERE b.booking_amount > 20000
+SELECT * FROM bookings b WHERE b.room_rate > 6000
+SELECT * FROM bookings b WHERE b.nights > 3
+SELECT * FROM bookings b WHERE b.rating < 4.2
+SELECT * FROM bookings b WHERE b.booking_amount BETWEEN 8000 AND 25000
+SELECT * FROM bookings b WHERE b.room_rate < 4000
+
+
+SELECT * FROM bookings b WHERE b.booking_status = "Confirmed" AND b.booking_amount > 15000
+SELECT * FROM bookings b WHERE b.city = "Mumbai" AND b.room_type = "Suite"
+SELECT * FROM bookings b WHERE b.nights > 2 AND b.rating > 4.5
+SELECT * FROM bookings b WHERE b.booking_status = "Completed" AND b.booking_amount > 10000
+SELECT * FROM bookings b WHERE b.room_type = "Standard" AND b.room_rate < 3500
+
+
+SELECT * FROM bookings b WHERE b.city = "Hyderabad" OR b.city = "Bengaluru"
+SELECT * FROM bookings b WHERE b.city = "Mumbai" OR b.city = "Delhi"
+SELECT * FROM bookings b WHERE b.room_type = "Suite" OR b.room_type = "Executive"
+SELECT * FROM bookings b WHERE b.booking_status = "Completed" OR b.booking_status = "Confirmed" 
+SELECT * FROM bookings b WHERE b.city IN ("Chennai", "Pune", "Kochi")
+
+
+SELECT * FROM bookings b ORDER BY b.booking_amount 
+SELECT * FROM bookings b ORDER BY b.booking_amount DESC
+SELECT * FROM bookings b ORDER BY b.rating DESC
+SELECT * FROM bookings b ORDER BY b.nights DESC
+SELECT * FROM bookings b ORDER BY b.city, b.booking_amount
+
+
+SELECT COUNT(1) FROM bookings b 
+SELECT COUNT(1) FROM bookings b WHERE b.booking_status = "Confirmed"
+SELECT COUNT(1) FROM bookings b WHERE b.booking_status = "Completed"
+SELECT COUNT(1) FROM bookings b WHERE b.room_type = "Suite"
+SELECT COUNT(1) FROM bookings b WHERE b.city = "Pune"
+
+
+SELECT b.city, COUNT(1) FROM bookings b GROUP BY b.city
+SELECT b.room_type, COUNT(1) FROM bookings b GROUP BY b.room_type
+SELECT b.booking_status, COUNT(1) FROM bookings b GROUP BY b.booking_status
+SELECT b.city, SUM(b.booking_amount) AS total_booking_amount FROM bookings b GROUP BY b.city
+SELECT b.room_type, AVG(b.booking_amount) AS avg_booking_amount FROM bookings b GROUP BY b.room_type
+SELECT b.city, AVG(b.rating) AS avg_rating FROM bookings b GROUP BY b.city
+SELECT b.city, SUM(b.nights) AS total_nights FROM bookings b GROUP BY b.city
+SELECT b.room_type, AVG(b.room_rate) AS avg_room_rate FROM bookings b GROUP BY b.room_type
+
+
+
+SELECT b.city, SUM(b.booking_amount) AS total_booking_amount FROM bookings b WHERE b.booking_status = "Confirmed" GROUP BY b.city
+SELECT b.city, COUNT(1) AS total_booking_amount FROM bookings b WHERE b.booking_status = "Completed" GROUP BY b.city
+SELECT b.city, AVG(b.booking_amount) AS avg_booking_amount FROM bookings b WHERE b.booking_amount > 8000 GROUP BY b.city
+SELECT b.room_type, SUM(b.nights) AS total_nights FROM bookings b GROUP BY b.room_type
+
+
+SELECT * FROM bookings b ORDER BY b.booking_amount DESC OFFSET 5 LIMIT 5
+SELECT * FROM bookings b ORDER BY b.rating DESC OFFSET 3 LIMIT 3
+SELECT * FROM bookings b WHERE b.room_type = "Suite" AND b.booking_status = "Confirmed" ORDER BY b.booking_amount DESC
+SELECT * FROM bookings b WHERE b.booking_amount > 15000 AND b.rating > 4.5 ORDER BY b.booking_amount DESC
+SELECT * FROM bookings b WHERE b.city IN ("Hyderabad", "Bengaluru") AND b.nights > 2
+SELECT * FROM bookings b WHERE b.booking_status = "Cancelled" ORDER BY b.rating
+SELECT b.guest_name, b.city, b.hotel_name, b.booking_amount, b.rating FROM bookings b WHERE b.booking_amount > 20000
+SELECT * FROM bookings b WHERE b.room_rate >= 6000 AND b.room_type = "Executive" ORDER BY b.room_rate DESC
+
+

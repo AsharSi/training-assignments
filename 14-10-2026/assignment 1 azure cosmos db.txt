@@ -1,0 +1,42 @@
+SQL quereies for questions from Section F to K
+
+SELECT * FROM charging_stations s ORDER BY s.revenue
+SELECT * FROM charging_stations s ORDER BY s.revenue DESC
+SELECT * FROM charging_stations s ORDER BY s.daily_sessions DESC
+SELECT * FROM charging_stations s ORDER BY s.uptime_percent 
+SELECT * FROM charging_stations s ORDER BY s.city ASC, s.revenue DESC
+
+SELECT COUNT(1) FROM charging_stations s
+SELECT COUNT(1) FROM charging_stations s WHERE s.status = "Active"
+SELECT COUNT(1) FROM charging_stations s WHERE s.station_type = "Fast"
+SELECT COUNT(1) FROM charging_stations s WHERE s.city = "Pune"
+SELECT COUNT(1) FROM charging_stations s WHERE s.revenue > 15000
+
+SELECT s.city, COUNT(1) FROM charging_stations s GROUP BY s.city
+SELECT s.station_type, COUNT(1) FROM charging_stations s GROUP BY s.station_type
+SELECT s.status, COUNT(1) FROM charging_stations s GROUP BY s.status
+SELECT s.city, SUM(s.revenue) AS total_revenue FROM charging_stations s GROUP BY s.city
+SELECT s.station_type, AVG(s.revenue) AS avg_revenue FROM charging_stations s GROUP BY s.station_type
+SELECT s.city, AVG(s.uptime_percent) AS avg_uptime FROM charging_stations s GROUP BY s.city
+SELECT s.city, SUM(s.daily_sessions) AS total_daily_sessions FROM charging_stations s GROUP BY s.city
+SELECT s.station_type, AVG(s.capacity_kw) AS avg_capacity_kw FROM charging_stations s GROUP BY s.station_type
+
+SELECT s.city, SUM(s.revenue) AS total_revenue FROM charging_stations s WHERE s.status = "Active" GROUP BY s.city 
+SELECT s.city, COUNT(1) FROM charging_stations s WHERE s.station_type = "Fast" GROUP BY s.city 
+SELECT s.city, AVG(s.revenue) AS avg_revenue FROM charging_stations s WHERE s.revenue > 8000 GROUP BY s.city 
+SELECT s.station_type, SUM(s.daily_sessions) AS total_daily_sessions FROM charging_stations s WHERE s.revenue > 8000 GROUP BY s.station_type
+
+SELECT * FROM charging_stations s ORDER BY s.revenue DESC OFFSET 5 LIMIT 5
+SELECT * FROM charging_stations s ORDER BY s.daily_sessions DESC OFFSET 3 LIMIT 3
+SELECT * FROM charging_stations s WHERE s.status = "Active" AND s.station_type = "Fast" ORDER BY s.revenue DESC 
+SELECT * FROM charging_stations s WHERE s.revenue > 12000 AND s.uptime_percent > 97 ORDER BY s.revenue DESC 
+SELECT * FROM charging_stations s WHERE s.city IN ("Hyderabad", "Bengaluru") AND s.daily_sessions > 30
+SELECT * FROM charging_stations s WHERE s.status = "Maintenance" ORDER BY s.uptime_percent
+SELECT s.station_name, s.city, s.revenue, s.uptime_percent FROM charging_stations s WHERE s.revenue > 15000
+SELECT * FROM charging_stations s WHERE s.station_type = "Fast" AND s.capacity_kw >= 120 ORDER BY s.capacity_kw DESC
+
+SELECT TOP 1 s.city, SUM(s.revenue) as total_revenue FROM charging_stations s GROUP BY s.city ORDER BY total_revenue DESC
+SELECT * FROM charging_stations s ORDER BY s.revenue DESC OFFSET 1 LIMIT 1
+SELECT * FROM charging_stations s ORDER BY s.uptime_percent OFFSET 1 LIMIT 1
+SELECT COUNT(1) FROM charging_stations s WHERE s.status = "Maintenance"
+
