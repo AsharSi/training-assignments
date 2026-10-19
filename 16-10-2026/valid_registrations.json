@@ -1,0 +1,11 @@
+[
+    {
+        "registration_id": "R101",
+        "name": "Meera Das",
+        "email": "meera@example.com",
+        "age": 28,
+        "ticket_type": "Premium",
+        "amount": 2500.0
+    },
+    "{\n    \"registration_id\": \"R104\",\n    \"name\": \"Feroz Ali\",\n    \"email\": \"feroz@example.com\",\n    \"age\": 41,\n    \"ticket_type\": \"Standard\",\n    \"amount\": 1200.0\n}"
+]
