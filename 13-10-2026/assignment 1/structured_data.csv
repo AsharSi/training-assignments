@@ -1,0 +1,11 @@
+Shipment_ID,Origin,Destination,Mode,Weight_Kg,Distance_Km,Delivery_Days,C
+S1001,Ahmedabad,Surat,Road,120,265,1,4200
+S1002,Pune,Nashik,Road,85,210,1,3100
+S1003,Chennai,Kochi,Rail,300,690,2,7800
+S1004,Delhi,Jaipur,Road,150,280,1,4600
+S1005,Bengaluru,Hyderabad,Rail,420,575,2,9200
+S1006,Indore,Bhopal,Road,95,190,1,2900
+S1007,Mumbai,Goa,Air,60,590,1,11500
+S1008,Patna,Ranchi,Road,110,330,2,3900
+S1009,Kolkata,Bhubaneswar,Rail,250,440,2,6800
+S1010,Hyderabad,Vijayawada,Road,180,275,1,5100
