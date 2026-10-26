@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
         image = 'https://images.unsplash.com/photo-1560343090-f0409e92791a?w=500&auto=format&fit=crop',
         price = 0,
     } = product;
-    
+
     const formattedPrice = new Intl.NumberFormat('en-IN', {
         style: 'currency',
         currency: 'INR',
@@ -52,12 +52,54 @@ const ProductCard = ({ product }) => {
     );
 };
 
-export default function ProductList({ products }) {
+export default function ProductList({ products = [] }) {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // Filter products based on the search query (matching product name or category)
+  const filteredProducts = products.filter((product) => {
+    const name = product.name || '';
+    const category = product.category || '';
+    const query = searchQuery.toLowerCase();
+
     return (
-        <div className="product-grid">
-            {products?.map((product, index) => (
-                <ProductCard key={product.id || index} product={product} />
-            ))}
-        </div>
+      name.toLowerCase().includes(query) ||
+      category.toLowerCase().includes(query)
     );
+  });
+
+  return (
+    <div className="product-list-container">
+      {/* Search Bar Input */}
+      <div className="search-bar-wrapper">
+        <input
+          type="text"
+          placeholder="Search products by name or category..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
+        {searchQuery && (
+          <button 
+            className="search-clear-btn" 
+            onClick={() => setSearchQuery('')}
+          >
+            ✕
+          </button>
+        )}
+      </div>
+
+      {/* Product Grid or No Results Message */}
+      {filteredProducts.length > 0 ? (
+        <div className="product-grid">
+          {filteredProducts.map((product, index) => (
+            <ProductCard key={product.id || index} product={product} />
+          ))}
+        </div>
+      ) : (
+        <div className="no-results">
+          <p>No products found matching "{searchQuery}"</p>
+        </div>
+      )}
+    </div>
+  );
 }
