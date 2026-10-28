@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext'; // Import your cart context
+import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
 export default function Navbar({ user }) {

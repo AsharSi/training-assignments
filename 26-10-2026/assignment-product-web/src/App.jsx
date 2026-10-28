@@ -15,7 +15,7 @@ export default function App() {
   const { user, logout } = useAuth()
   return (
     <>
-      <Navbar />
+      <Navbar user={user} />
       <Routes>
         {
           user ?
