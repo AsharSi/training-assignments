@@ -1,6 +1,7 @@
 .venv/
 .idea/
-.env
+.env*
+!.env.example
 __pycache__/
 *.pyc
 chroma_db/
