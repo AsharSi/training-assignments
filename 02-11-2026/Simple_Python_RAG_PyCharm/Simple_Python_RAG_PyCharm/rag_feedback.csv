@@ -1,0 +1,148 @@
+timestamp,model,question,answer,retrieved_chunk_ids,best_distance,total_seconds,feedback
+2026-11-02T14:34:26,nvidia/nemotron-3-ultra-550b-a55b:free,what is the annual travel allowance,"I could not find that information in the document. The reference text describes business travel approval processes, expense claim procedures, and flight class policies, but does not specify an annual travel allowance amount or budget.","chunk_008, chunk_003, chunk_007",0.5431,8.52,Correct
+2026-11-02T14:45:59,nvidia/nemotron-3-ultra-550b-a55b:free,What to do when my things are stolen,"Based on the employee guide, the procedure for lost or stolen **company devices** (laptop or mobile device) is as follows:
+
+1. **Report it within 24 hours** of discovery to both IT and the security team [chunk_006].
+2. **Include in the report**: the device type, last known location (if known), and the approximate time you noticed the loss [chunk_006].
+3. **Do not delay reporting** hoping to find the device [chunk_007].
+4. IT may remotely lock the device or revoke access tokens as a precaution [chunk_006].
+5. Replacement equipment is managed by IT after the incident is logged [chunk_007].
+
+The document does not provide guidance for personal (non‑company) items that are stolen.","chunk_006, chunk_007, chunk_005",0.5868,30.37,Correct
+2026-11-02T14:50:19,particle-ai/particle-1,What to do when my things are stolen,"If a company laptop or mobile device is lost or stolen, report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location if known, and approximate time you noticed the loss. IT may remotely lock the device or revoke access tokens as a precaution. Do not delay reporting because you hope to find the device; replacement equipment is managed by IT after the incident is logged. [chunk_006][chunk_007]","chunk_006, chunk_007, chunk_005",0.5868,4.33,Correct
+2026-11-02T14:52:28,minimax/minimax-m3.1-flash,what to do when things are stolen,"**If a company laptop or mobile device is lost or stolen**, the guide (Section 9, LOST OR STOLEN DEVICES) requires the following [chunk_006][chunk_007]:
+
+1. **Report it promptly** to both IT and the security team — within **24 hours of discovery** [chunk_006].
+2. **Include in the report**: the device type, the last known location (if known), and the approximate time you noticed the loss [chunk_006][chunk_007].
+3. **Do not delay reporting** because you hope to find the device [chunk_007].
+4. **IT may take precautionary action**, such as remotely locking the device or revoking access tokens [chunk_006][chunk_007].
+5. **Replacement equipment** is managed by IT after the incident is logged [chunk_007].
+
+Additionally, if the device or its credentials may have been compromised, notify the security team immediately through the security incident channel, and never place API keys, passwords, or confidential customer data into public code repositories [chunk_006].","chunk_006, chunk_007, chunk_005",0.5821,6.19,Correct
+2026-11-02T15:20:36,minimax/minimax-m3.1-flash,which days employees must work from office?,"Employees who are eligible for hybrid work are expected to work from the office on **Tuesdays and Thursdays**. Monday, Wednesday, and Friday may be remote-work days with manager approval [chunk_003].
+
+Team leads can also request additional office attendance for workshops, customer meetings, security reviews, or release activities [chunk_003].","chunk_002, chunk_003, chunk_001",0.42,4.3,Correct
+2026-11-02T15:21:57,particle-ai/particle-1,which days employees must work from office,Employees eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays [chunk_002].,"chunk_002, chunk_003, chunk_001",0.4141,2.72,Correct
+2026-11-02T15:22:47,nvidia/nemotron-3-ultra-550b-a55b:free,which days employees must work from office,"Based on the hybrid work policy, employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays [chunk_002].","chunk_002, chunk_003, chunk_001",0.4141,4.12,Correct
+2026-11-02T16:15:19,nvidia/nemotron-3-ultra-550b-a55b:free,What is the annual travel allowance?,"I could not find that information in the document. The reference text describes the travel approval process, expense claim procedures, and flight class policy, but does not mention an annual travel allowance or budget. [chunk_008] [chunk_007] [chunk_010]","chunk_008, chunk_003, chunk_007",0.54,12.99,Correct
+2026-11-02T16:15:29,dots-studio/dots-3-note-preview:free,What is the annual travel allowance?,"
+
+I could not find that information in the document.","chunk_008, chunk_003, chunk_007",0.54,10.11,Correct
+2026-11-02T16:15:37,minimax/minimax-m3.1-flash,What is the annual travel allowance?,"I could not find that information in the document. The guide does not specify any annual travel allowance amount or travel budget.
+
+What it does say about business travel:
+- Written manager approval is required before booking business travel; international travel also requires department head approval [chunk_007, chunk_008].
+- Economy class is the default flight class unless a documented exception is approved [chunk_008].
+- Travelers should retain receipts and submit expense claims within 14 calendar days of the expense date [chunk_008, chunk_007].
+
+The only annual monetary figure given in the document is an annual learning budget of INR 20,000 (subject to manager approval), which is separate from travel [chunk_008].","chunk_008, chunk_003, chunk_007",0.54,4.51,Correct
+2026-11-02T16:15:39,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,1.81,Correct
+2026-11-02T16:15:54,nvidia/nemotron-3.5-lightning:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,15.8,Correct
+2026-11-02T16:15:57,particle-ai/particle-1,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,2.23,Correct
+2026-11-02T16:16:05,nvidia/nemotron-3-ultra-550b-a55b:free,What to do when my things are stolen?,"According to the employee guide, if a **company laptop or mobile device** is lost or stolen, you must:
+
+1.  **Report it to IT and the security team within 24 hours of discovery** [chunk_006].
+2.  **Include the device type, last known location (if known), and the approximate time you noticed the loss** in the report [chunk_006].
+3.  **Do not delay reporting** in the hope of finding the device [chunk_007].
+
+IT may then remotely lock the device or revoke access tokens as a precaution, and replacement equipment is managed by IT after the incident is logged [chunk_006][chunk_007].
+
+The document does not provide guidance for personal items that are not company-issued devices.","chunk_006, chunk_007, chunk_005",0.6002,8.3,Correct
+2026-11-02T16:16:13,dots-studio/dots-3-note-preview:free,What to do when my things are stolen?,"
+
+If your company laptop or mobile device is lost or stolen, you must report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location (if known), and the approximate time you noticed the loss. IT may remotely lock the device or revoke access tokens as a precaution. You should not delay reporting in hopes of finding the device. Replacement equipment is managed by IT after the incident is logged [chunk_006][chunk_007].","chunk_006, chunk_007, chunk_005",0.6002,7.63,Correct
+2026-11-02T16:16:20,minimax/minimax-m3.1-flash,What to do when my things are stolen?,"If your belongings are stolen, the guide's ""Lost or Stolen Devices"" section covers what to do [chunk_006]:
+
+**Report it quickly:** A lost or stolen company laptop or mobile device must be reported to IT and the security team within **24 hours of discovery** [chunk_006].
+
+**Include these details in the report** [chunk_006] [chunk_007]:
+- The device type
+- Last known location, if known
+- The approximate time you noticed the loss
+
+**Don't delay:** Employees should not delay reporting because they hope to find the device [chunk_007].
+
+**What happens next:** IT may remotely lock the device or revoke access tokens as a precaution, and replacement equipment is managed by IT after the incident is logged [chunk_007].
+
+Note: The document addresses stolen company laptops and mobile devices specifically; it does not provide guidance for other types of stolen personal belongings.","chunk_006, chunk_007, chunk_005",0.6002,4.22,Correct
+2026-11-02T16:16:25,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,What to do when my things are stolen?,"Report the stolen device to IT and the security team within 24 hours of discovering the loss. Include the device type, any known last location, and the approximate time you noticed the loss. IT may remotely lock the device or revoke access tokens as a precaution. [chunk_006][chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,4.31,Correct
+2026-11-02T16:16:44,nvidia/nemotron-3.5-lightning:free,What to do when my things are stolen?,"According to the employee guide, if a company laptop or mobile device is lost or stolen, you must report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location (if known), and the approximate time you noticed the loss. IT may remotely lock the device or revoke access tokens as a precaution. You should not delay reporting in hopes of finding the device, as replacement equipment is managed by IT after the incident is logged. [chunk_006, chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,18.76,Correct
+2026-11-02T16:16:46,particle-ai/particle-1,What to do when my things are stolen?,"If a company laptop or mobile device is lost or stolen, report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location if known, and the approximate time you noticed the loss. Do not delay reporting because you hope to find the device. IT may remotely lock the device or revoke access tokens, and replacement equipment is managed by IT after the incident is logged. [chunk_006][chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,2.5,Correct
+2026-11-02T16:16:54,nvidia/nemotron-3-ultra-550b-a55b:free,Which days employees must work from office?,"According to the hybrid work policy, employees who are eligible for hybrid work are expected to work from the office on **Tuesdays and Thursdays** [chunk_002]. Monday, Wednesday, and Friday may be remote-work days with manager approval.","chunk_002, chunk_003, chunk_001",0.42,8.1,Correct
+2026-11-02T16:17:00,dots-studio/dots-3-note-preview:free,Which days employees must work from office?,"
+
+Based on the reference text, employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays.
+
+This information is found in [chunk_002] under section 3, HYBRID WORK POLICY.","chunk_002, chunk_003, chunk_001",0.42,5.72,Correct
+2026-11-02T16:17:05,google/gemma-4-31b-it:free,Which days employees must work from office?,Employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays [chunk_002].,"chunk_002, chunk_003, chunk_001",0.42,4.62,Correct
+2026-11-02T16:17:08,minimax/minimax-m3.1-flash,Which days employees must work from office?,"Eligible hybrid employees are expected to work from the office on **Tuesdays and Thursdays**. Monday, Wednesday, and Friday may be remote-work days with manager approval, and team leads can request additional office attendance for workshops, customer meetings, security reviews, or release activities. [chunk_002]","chunk_002, chunk_003, chunk_001",0.42,2.98,Correct
+2026-11-02T16:17:10,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,Which days employees must work from office?,Employees must work from the office on Tuesdays and Thursdays. [chunk_002],"chunk_002, chunk_003, chunk_001",0.42,2.07,Correct
+2026-11-02T16:17:27,nvidia/nemotron-3.5-lightning:free,Which days employees must work from office?,"According to the employee guide, employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays. [chunk_002]","chunk_002, chunk_003, chunk_001",0.42,16.61,Correct
+2026-11-02T16:17:30,particle-ai/particle-1,Which days employees must work from office?,Employees eligible for hybrid work must work from the office on **Tuesdays and Thursdays** [chunk_002].,"chunk_002, chunk_003, chunk_001",0.42,2.73,Correct
+2026-11-02T16:30:01,nvidia/nemotron-3-ultra-550b-a55b:free,What is the annual travel allowance?,"I could not find that information in the document. The reference text describes business travel approval processes and expense reimbursement procedures, but does not specify an annual travel allowance amount. [chunk_008] [chunk_007]","chunk_008, chunk_003, chunk_007",0.54,5.56,Correct
+2026-11-02T16:30:04,cohere/north-mini-code:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,2.9,Correct
+2026-11-02T16:30:13,dots-studio/dots-3-note-preview:free,What is the annual travel allowance?,"
+
+I could not find that information in the document.","chunk_008, chunk_003, chunk_007",0.54,8.54,Correct
+2026-11-02T16:30:22,liquid/lfm-2.5-2.6b:free,What is the annual travel allowance?,"I could not find that information in the document. The reference text mentions economy class as the default flight class for business travel and that travel expenses require approval, but it does not specify an annual travel allowance amount.","chunk_008, chunk_003, chunk_007",0.54,2.52,Correct
+2026-11-02T16:30:24,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,1.96,Correct
+2026-11-02T16:30:37,nvidia/nemotron-3.5-lightning:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,12.89,Correct
+2026-11-02T16:30:40,nvidia/nemotron-3.5-super-vl:free,What is the annual travel allowance?,I could not find that information in the document.,"chunk_008, chunk_003, chunk_007",0.54,2.82,Correct
+2026-11-02T16:31:03,nvidia/nemotron-3-ultra-550b-a55b:free,What to do when my things are stolen?,"Based on the employee guide, the procedure applies specifically to **company laptops or mobile devices**:
+
+- Report the loss or theft to **IT and the security team within 24 hours** of discovery.  
+- Include in the report: **device type, last known location (if known), and approximate time you noticed the loss**.  
+- **Do not delay reporting** in hopes of finding the device.  
+- IT may **remotely lock the device or revoke access tokens** as a precaution.  
+- Replacement equipment is managed by IT after the incident is logged.  
+
+[SOURCE chunk_006] [SOURCE chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,11.68,Correct
+2026-11-02T16:31:18,cohere/north-mini-code:free,What to do when my things are stolen?,"When a company laptop or mobile device is lost or stolen, you must act quickly:
+
+1. **Report it immediately** – Notify both **IT** and the **security team** **within 24 hours** of discovering the loss.  
+2. **Include required details** in the report:  
+   * Device type  
+   * Last known location (if known)  
+   * Approximate time you noticed the loss  
+3. **Do not delay** reporting in hopes of finding the device.  
+4. **After the incident is logged**, IT may remotely **lock the device** or **revoke access tokens** as a precaution.  
+5. **Replacement equipment** will be managed by IT once the incident is recorded.
+
+*Reference: [SOURCE chunk_006] and [SOURCE chunk_007]*.","chunk_006, chunk_007, chunk_005",0.6002,15.66,Correct
+2026-11-02T16:31:27,dots-studio/dots-3-note-preview:free,What to do when my things are stolen?,"
+
+If your company laptop or mobile device is lost or stolen, you must report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location (if known), and the approximate time you noticed the loss. Do not delay reporting in hopes of finding the device. IT may remotely lock the device or revoke access tokens as a precaution, and replacement equipment will be managed by IT after the incident is logged.
+
+Source: [chunk_006], [chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,8.65,Correct
+2026-11-02T16:31:37,liquid/lfm-2.5-2.6b:free,What to do when my things are stolen?,"When your company devices (laptop or mobile) are stolen, you should report the incident to IT and the security team within 24 hours of discovery [chunk_006]. The report should include the device type, last known location if known, and the approximate time you noticed the loss [chunk_007]. IT may remotely lock the device or revoke access tokens as a precaution [chunk_007]. Replacement equipment is managed by IT after the incident is logged [chunk_007].
+
+If a device or credential may have been compromised, you must also notify the security team immediately through the security incident channel [chunk_006].","chunk_006, chunk_007, chunk_005",0.6002,3.54,Correct
+2026-11-02T16:31:45,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,What to do when my things are stolen?,"Report the stolen device to IT and the security team within 24 hours of discovering the loss, providing the device type, any known last location, and the approximate time you noticed it missing. IT may remotely lock the device or revoke access tokens as a precaution. [chunk_006][chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,8.44,Correct
+2026-11-02T16:32:19,nvidia/nemotron-3.5-lightning:free,What to do when my things are stolen?,"According to the employee guide [chunk_007], if a company laptop or mobile device is lost or stolen, you must report it to IT and the security team within 24 hours of discovery. The report should include the device type, the last known location (if known), and the approximate time you noticed the loss. IT may remotely lock the device or revoke access tokens as a precaution. The guide also states that you should not delay reporting because you hope to find the device, as replacement equipment is managed by IT after the incident is logged.
+
+Note: This procedure applies specifically to company-issued laptops or mobile devices as outlined in the guide; the document does not address personal items.","chunk_006, chunk_007, chunk_005",0.6002,33.14,Correct
+2026-11-02T16:32:23,nvidia/nemotron-3.5-super-vl:free,What to do when my things are stolen?,"Based on the employee guide, if a company laptop or mobile device is lost or stolen:
+
+- Report it to IT and the security team within 24 hours of discovery [chunk_006].
+- Include the device type, last known location (if known), and the approximate time you noticed the loss [chunk_006][chunk_007].
+- Do not delay reporting because you hope to find the device [chunk_007].
+- IT may remotely lock the device or revoke access tokens as a precaution [chunk_006][chunk_007].
+- Replacement equipment is managed by IT after the incident is logged [chunk_007].
+
+The guide only covers lost or stolen company laptops or mobile devices; it does not provide instructions for personal belongings.
+
+[chunk_006], [chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,4.1,Correct
+2026-11-02T16:32:49,xingchen-agi/xing4.0-29b-a4b:free,What to do when my things are stolen?,"When a company device is lost or stolen, you must report it to IT and the security team within 24 hours of discovery. The report should include the device type, last known location if known, and the approximate time you noticed the loss. As a precaution, IT may remotely lock the device or revoke access tokens. Employees should not delay reporting because they hope to find the device, as replacement equipment is managed by IT after the incident is logged.
+
+[SOURCE chunk_006], [SOURCE chunk_007]","chunk_006, chunk_007, chunk_005",0.6002,21.23,Correct
+2026-11-02T16:32:55,nvidia/nemotron-3-ultra-550b-a55b:free,Which days employees must work from office?,"Based on the hybrid work policy, employees who are eligible for hybrid work are expected to work from the office on **Tuesdays and Thursdays** [chunk_002].","chunk_002, chunk_003, chunk_001",0.42,5.77,Correct
+2026-11-02T16:32:57,cohere/north-mini-code:free,Which days employees must work from office?,Employees who are eligible for hybrid work must be in the office on **Tuesdays and Thursdays** [chunk_003].,"chunk_002, chunk_003, chunk_001",0.42,2.78,Correct
+2026-11-02T16:33:03,dots-studio/dots-3-note-preview:free,Which days employees must work from office?,"
+
+Based on the reference text, employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays.
+
+The text states: ""Employees who are eligible for hybrid work are expected to work from the office on Tuesdays and Thursdays."" [chunk_002]","chunk_002, chunk_003, chunk_001",0.42,5.68,Correct
+2026-11-02T16:33:11,liquid/lfm-2.5-2.6b:free,Which days employees must work from office?,"According to the reference text, employees who are eligible for hybrid work are expected to work from the office on **Tuesdays and Thursdays**. Monday, Wednesday, and Friday may be remote-work days with manager approval [chunk_002][chunk_003].","chunk_002, chunk_003, chunk_001",0.42,1.22,Correct
+2026-11-02T16:33:19,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,Which days employees must work from office?,Employees must work from the office on Tuesdays and Thursdays. [chunk_002],"chunk_002, chunk_003, chunk_001",0.42,8.71,Correct
+2026-11-02T16:33:33,nvidia/nemotron-3.5-lightning:free,Which days employees must work from office?,Tuesdays and Thursdays (for employees eligible for hybrid work). [chunk_003],"chunk_002, chunk_003, chunk_001",0.42,13.46,Correct
+2026-11-02T16:33:35,nvidia/nemotron-3.5-super-vl:free,Which days employees must work from office?,"Employees who are eligible for hybrid work are expected to work from the office on **Tuesdays and Thursdays**. Monday, Wednesday, and Friday may be remote-work days with manager approval. [SOURCE chunk_002]","chunk_002, chunk_003, chunk_001",0.42,2.01,Correct
