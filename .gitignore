@@ -1,2 +1,4 @@
 .venv*
 Models*
+*.env
+node_modules
