@@ -1,0 +1,3 @@
+agent_framework
+dotenv
+openai
